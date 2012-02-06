@@ -1,5 +1,12 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  background: url("../img/background.png") repeat;
+}
+
 header {
-  background:red;
+  background:rgba(67,180,12,.2);
+  border-bottom:2px solid rgba(67,180,12,.15);
+  padding:20px;
   -webkit-border-radius: 0 0 4px 4px;
      -moz-border-radius: 0 0 4px 4px;
           border-radius: 0 0 4px 4px;
@@ -8,4 +15,44 @@ header {
 header ul li {
   display:inline;
   list-style-type:none;
+  line-height:68px;
+  margin-left:40px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+header ul li a {
+  color:#333;
+}
+
+header ul li a:hover {
+  border-bottom:2px solid;
+  text-decoration:none;
+  opacity:.6;
+  color:#333;
+}
+
+header img {
+  width:240px;
+}
+
+.hero-unit input {
+  height:28px;
+  margin: -3px 10px 0   0;
+}
+
+.hero-unit {
+  margin-top:40px;
+  background: url("../img/hero.png") repeat;
+}
+
+footer {
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid rgba(0,0,0,.1);
+  
+}
+
+p {
+  color:rgba(0,0,0,.6);
 }
