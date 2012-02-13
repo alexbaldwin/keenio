@@ -36,14 +36,9 @@ header img {
   width:240px;
 }
 
-.hero-unit input {
+.cta input {
   height:28px;
   margin: -3px 10px 0   0;
-}
-
-.hero-unit {
-  margin-top:40px;
-  background: url("../img/hero.png") repeat;
 }
 
 footer {
@@ -55,4 +50,30 @@ footer {
 
 p {
   color:rgba(0,0,0,.6);
+}
+
+.hero {
+  background: url("../img/wood_pattern.png") repeat;
+  box-shadow: 0 1px 6px #888;
+  margin-bottom:40px;
+}
+
+.hero .container {
+  background: url("../img/iphone.png") no-repeat;
+  background-position: top center;
+  min-height:200px;
+  
+}
+.hero h1 {
+  text-align:center;
+  margin-top:60px;
+  color:#fff;
+  text-shadow: 0 1px 2px #222;
+  font-size:62px;
+  line-height:72px;
+}
+
+.supplement img {
+  margin:10px;
+  opacity:.5;
 }
