@@ -1,124 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Keen.io</title>
-    <meta name="description" content="Keen insights. DATA!">
-    <meta name="author" content="Keen Team">
+    <head>
+        <meta charset="utf-8">
+        <title>keen.io - record everything</title>
+        <meta name="description" content="mobile metrics analytics social gaming keen">
+        <meta name="author" content="Keen Labs, Inc.">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Le styles -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href="css/site-style.css" rel="stylesheet">
+        <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="/static/images/favicon.ico">
+        <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/static/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/static/images/apple-touch-icon-114x114.png">
+    </head>
+
+    <body onload="prettyPrint()">
+
+        <header>
+            <div class="container">
+                <nav class="pull-right">
+                    <ul>
+                        <li><a href="http://blog.keen.io">Blog</a></li>
+                        <li><a href="/static/pdf/Keen_Product_Overview.pdf">Product</a></li>
+                        <!-- li><a href="#">Services</a></li -->
+                        <li><a href="mailto:team@keen.io">Contact</a></li>
+                        <li><a href="{{ url_for('.show_login') }}">Login</a></li>
+                    </ul>
+                </nav>
+                <img src="img/keen_logo.png" alt="Keen.io">
+            </div>
+        </header>
+
+        <div class="hero">
+            <div class="container">
+                <!-- Main hero unit for a primary marketing message or call to action -->
+                <div class="row">
+                    <div class="span12">
+                      <h1>Record every action your users take.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
     
+        <div class="container">
+            <div class="row">
+                <div class="span8 offset2">
+                    <h2>Integrate your iOS application with ease.</h2>
+                    <pre class="prettyprint linenums lang-cpp">
+#import "KeenClient.h"
+// Create your client.
+KeenClient *client = [KeenClient clientForProject:@"projectId" withAuthToken:@"auth"];
+// Build your event properties as a dictionary.
+NSDictionary *event = [NSDictionary dictionaryWithObject:@"gold_coins" forKey:@"item_name"];
+//Add your event to a collection.
+[client addEvent:event toCollection:@"purchases"];
+// Send us your tracked events.
+[client upload];</pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span8 offset2 cta">
+                    <h2>Start collecting your data now.</h2>
+                    <p>We are looking for iOS developers that want intimate knowledge about how their users use their application.</p>
+                    <form action="/signup" method=post id="signup_form">
+                        <input type="text" placeholder="E-mail" id="email" name="email"/><a class="btn btn-success btn-large" onclick="$('#signup_form').submit()">Sign up for early access &raquo;</a>
+                        <div class="alert alert-error" style="margin-top:10px; width:350px;">Oops!  Invalid email address.  Please enter a valid one!</div>
+                    </form>
+                </div>
+            </div>
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="js/google-code-prettify/prettify.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link href="css/style.css" rel="stylesheet">
+            <hr />
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-  </head>
-
-  <body onload="prettyPrint()">
-   
-    <header>
-      <div class="container">
-        <nav class="pull-right">
-          <ul>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Tour</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </nav>
-       <img src="img/keen_logo.png" alt="Keen.io">
-
-      </div>
-    </header>
-
-    <div class="hero">
-      <div class="container">
-
-      <!-- Main hero unit for a primary marketing message or call to action -->
-        <div class="row">
-          <div class="span12">
-            <h1>Monetize your freemium app.</h1>  
-          </div>
+            <!-- Example row of columns -->
+            <div class="row supplement">
+                <div class="span1"><img src="img/phone.png"></div>
+                <div class="span3">
+                    <h2>Easy Integration</h2>
+                    <p>Our iOS client library minimizes both battery and network usage for minimal impact on your
+                        application users.  We also recognize that every team and application is unique, so our system
+                        inherits the vocabulary of your product team rather than forcing you and your team to start
+                        using ours.  </p>
+                    <p><!--a class="btn" href="#">View details &raquo;</a--></p>
+                </div>
+                <div class="span1"><img src="img/database.png"></div>
+                <div class="span3">
+                    <h2>Record everything</h2>
+                    <p>Our hosted metrics system is capable of handling billions of your users' actions per month.
+                        Finding usage patterns that drive revenue and optimizing your
+                        application means you need to record and analyze all of your users' behavior.
+                        We make that possible and affordable.</p>
+                    <p><!--a class="btn" href="#">View details &raquo;</a--></p>
+                </div>
+                <div class="span1"><img src="img/search.png"></div>
+                <div class="span3">
+                    <h2>Get the data you need</h2>
+                    <p>Getting the right data you need to answer the questions you have today about your user
+                        behavior is crucial to iterating on your application.  Our user interface allows anyone to get
+                        the deeply segmented data they want without using developer time to write queries.</p>
+                    <p><!--a class="btn" href="#">View details &raquo;</a--></p>
+                </div>
+            </div>
+            <!-- /container -->
         </div>
-      </div>
-    </div>
     
-    <div class="container">
-        <div class="row">
-          <div class="span5 offset1 cta">
-            <h2>Start recording now</h2>
-            <p>Extracting money from freemium app requires usage behavior that is super neat, Keen helps you stay awesome.</p>  
-            <p>
-              <input type="text" placeholder="E-mail" /><a class="btn btn-success btn-large">Sign up for our alpha &raquo;</a>
-            </p>
-          </div>
-          <div class="span5">
-            
-            <pre class="prettyprint linenums lang-py"># Implement
-metrics = KeenMetrics(apikey)
-metrics.addEvent('purchase', {'amount' : .99})
-metrics.send()
-metrics.addEvent('purchase', {'amount' : .99})
-metrics.send()
-metrics.addEvent('purchase', {'amount' : .99})
-metrics.send()</pre>
-          </div>
+        <footer>
+            <div class="container">
+                <p>&copy; 2012 Keen.io. All Rights Reserved.</p>
+            </div>
+        </footer>
 
-        </div>
-      
-      <hr />
-      
-      <!-- Example row of columns -->
-      <div class="row supplement">
-        <div class="span1"><img src="img/phone.png"></div>
-        <div class="span3">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        
-        <div class="span1"><img src="img/database.png"></div>
-        <div class="span3">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        
-        <div class="span1"><img src="img/search.png"></div>
-        <div class="span3">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
-    <!-- /container -->
-    </div> 
-    
-    <footer>
-      <div class="container">
-        <p>&copy; 2012 Keen.io. All Rights Reserved.</p>
-      </div>
-    </footer>
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
-    <script src="js/google-code-prettify/prettify.js"></script>
-
-
-  </body>
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+          <script>window.jQuery || document.write('<script src="../static/js/jquery.js"><\/script>')</script>
+        <script src="js/google-code-prettify/prettify.js"></script>
+    </body>
 </html>
