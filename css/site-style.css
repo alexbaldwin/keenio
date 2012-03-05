@@ -52,28 +52,66 @@ p {
   color:rgba(0,0,0,.6);
 }
 
-.hero {
-  background: url("../img/wood_pattern.png") repeat;
-  box-shadow: 0 1px 6px #888;
-  margin-bottom:40px;
+
+.pitch {
+  background:#24322a;
+  margin-top:20px;
+  border-radius:4px 4px 0 0;
 }
 
-.hero .container {
-  background: url("../img/iphone.png") no-repeat;
-  background-position: top center;
-  min-height:200px;
-  
-}
-.hero h1 {
-  text-align:center;
-  margin-top:60px;
-  color:#fff;
-  text-shadow: 0 1px 2px #222;
-  font-size:62px;
-  line-height:72px;
+.early {
+  border-radius:0 0 4px 4px;
+  background:#445c49;
+  border-top:1px solid black;
 }
 
-.supplement img {
-  margin:10px;
-  opacity:.5;
+.early a {
+  margin:20px;
+  line-height:20px;
+}
+
+.early h3 {
+  margin:20px 0 20px 0;
+  line-height:40px;
+  color:#efefef;
+  font-weight:normal;
+}
+
+
+
+.pitch h1 {
+  margin-top:40px;
+  font-size:4.5em;
+  line-height:1.2em;
+  color:#efefef;
+}
+
+.pitch p {
+  color: #749e7d;
+  margin:1em 0;
+  font-size:1.2em ;
+  line-height:1.6em;
+}
+
+.pitch img {
+  margin-top:20px;
+}
+
+.supplement {
+  background:#fff;
+  margin-top:20px;
+}
+
+.features img {
+  opacity:.3;
+}
+
+.features {
+  border-radius:4px 4px 0 0;
+}
+
+.cta {
+  border-top:1px solid black;
+  background:Red;
+  border-radius:0 0 4px 4px;
 }
