@@ -55,8 +55,8 @@ p {
 
 .pitch {
   background:#24322a;
-  margin-top:20px;
   border-radius:4px 4px 0 0;
+  margin-top:20px;
 }
 
 .early {
@@ -66,18 +66,15 @@ p {
 }
 
 .early a {
-  margin:20px;
+  margin:10px;
   line-height:20px;
 }
 
 .early h3 {
-  margin:20px 0 20px 0;
-  line-height:40px;
+  line-height:60px;
   color:#efefef;
   font-weight:normal;
 }
-
-
 
 .pitch h1 {
   margin-top:40px;
@@ -98,8 +95,11 @@ p {
 }
 
 .supplement {
-  background:#fff;
   margin-top:20px;
+}
+
+.supplement p {
+  margin-right:20px;
 }
 
 .features img {
@@ -107,11 +107,14 @@ p {
 }
 
 .features {
+  padding:20px 0  ;
+  background:#fff;
   border-radius:4px 4px 0 0;
 }
 
 .cta {
-  border-top:1px solid black;
-  background:Red;
+  padding:20px 0  ;
+  border-top:1px solid #ccc;
+  background: #E9E9E9;
   border-radius:0 0 4px 4px;
 }
